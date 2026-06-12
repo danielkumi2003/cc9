@@ -1,0 +1,331 @@
+
+/* GENERAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #e5e5e5;
+    color: #222222;
+}
+
+
+
+
+/*  HEADER NAVIGATION BAR */
+
+.main-header {
+    min-height: 45px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+.header-left {
+    float: left;
+}
+
+.logo-placeholder {
+    background-color: tomato;
+    border: 1px dashed #ffffff;
+    padding: 4px 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 4px;
+    color: rgb(43, 235, 235);
+}
+
+.header-menu {
+    display: inline-block;
+    list-style: none;
+}
+
+.header-menu li { 
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer; 
+}
+
+.header-menu li:hover { 
+    color: #cccccc; 
+}
+
+.header-right {
+    float: right;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.header-right span { 
+    margin-right: 10px;
+    cursor: pointer; 
+}
+
+.account-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+
+/* FILTER BAR STYLING */
+
+.filter-bar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #707070;
+    padding: 15px;
+}
+
+.filter-group {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 12px;
+    margin-bottom: 10px; 
+}
+
+.filter-group label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 4px;
+    letter-spacing: 3px;
+}
+
+.filter-input {
+    height: 32px;
+    border: 2px solid #707070;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: #fcfcfc;
+    width: 100px;
+}
+
+.filter-group-location 
+.filter-input { 
+    width: 180px; 
+}
+
+.range-divider { 
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 12px;
+    margin-bottom: 18px; 
+    font-size: 11px; 
+    color: #666666; 
+}
+
+.btn-update {
+    display: inline-block;
+    vertical-align: bottom;
+    height: 32px;
+    padding: 0 25px;
+    border: 2px solid #707070;
+    background-color: #ffffff;
+    border-radius: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-update:hover { 
+    background-color: #f0f0f0; 
+}
+
+.advanced-search {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 8px;
+    margin-bottom: 18px; 
+    font-size: 11px;
+    text-decoration: underline;
+    color: #666666;
+    cursor: pointer;
+}
+
+
+
+
+/* MAIN TWO COLUMN CONTAINER */
+
+.app-container {
+    width: 100%;
+    position: relative;
+
+    /* Default for desktop heights */
+    height: calc(100vh - 145px); 
+    /*border: 3px solid bisque; */
+}
+
+
+
+/* Left Column: Properties Sidebar List */
+
+.listings-sidebar {
+    width: 35%; /* Uses percentage width for fluid resizing */
+    min-width: 320px; /* Prevents sidebar from getting too squished */
+    max-width: 450px;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 2px solid #707070;
+    float: left;
+    overflow-y: scroll;
+}
+
+.listings-card {
+    display: block;
+    /*border-bottom: 2px solid #707070;*/
+    min-height: 165px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    border: 2px solid rgb(124, 124, 185);
+    margin-bottom: 15px;
+  
+}
+
+.listings-card:hover { 
+    background-color: #fcfcfc;
+ 
+}
+
+.card-thumb {
+    width: 40%; /* Image  takes up 40% of the card width */
+    max-width: 160px;
+    height: 163px;
+    object-fit: cover;
+    border-right: 2px solid #707070;
+    float: left;
+}
+
+.card-info {
+    padding: 12px 15px;
+    overflow: hidden; /* makes details cleanly next to floated image */
+}
+
+.card-info h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1a73e8;
+    margin-bottom: 4px;
+}
+
+.card-info .price {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.card-info .specs {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 6px;
+}
+
+.card-info .specs span { margin-right: 12px; }
+
+.card-info p {
+    font-size: 11px;
+    color: #444444;
+    line-height: 1.4;
+}
+
+
+
+/* Right Column Map- Continent View  */
+.map-canvas {
+    overflow: hidden; /* Clears remaining sidebar space dynamically */
+    height: 100%;
+    background-image: url('images/continent-image.avif');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+
+/*  MAP PINNING */
+
+.map-pin {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ea4335;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.pin-windermere { top: 38%; left: 38%; }
+.pin-cotswolds { top: 65%; left: 45%; }
+.pin-oxford { top: 62%; left: 52%; }
+.pin-london { top: 68%; left: 58%; }
+
+
+
+.pin-label {
+    position: absolute;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    top: -22px;
+    left: -15px;
+}
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Tablet Screens (900px or less) */
+@media (max-width: 900px) {
+    .header-menu { display: none; } /* Hide secondary links to make space */
+    .filter-group-location .filter-input { width: 140px; } /* Slim down search bar */
+}
+
+
+/* Mobile Phone Screens (650px or less) */
+@media (max-width: 650px) {
+    .main-header { text-align: center; }
+    .header-left, .header-right { float: none; display: block; margin: 5px auto; }
+    
+
+    /* Stack sidebar and map on top of each other instead of side-by-side */
+    .app-container { height: auto; } 
+    
+
+    .listings-sidebar {
+        width: 100%;
+        max-width: none;
+        height: 350px;   /* Fixed height for properties scroll area on mobile */
+        float: none;
+        border-right: none;
+        border-bottom: 3px solid #707070;
+    }
+    
+
+    .map-canvas {
+        height: 350px;   /* Map displays directly below the properties block */
+    }
+}
